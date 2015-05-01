@@ -22,30 +22,7 @@ document.body.addEventListener('click', function(){
 
 
 
-$("#danMuUserBtn").click(function() {
-	alert("test");
-    var text = document.getElementById('danMuUserText').value;
-  var color = document.getElementById('danMuUserColor').value;
-  var position = document.getElementById('danMuUserPosition').value;
-  var time = $('#danmu').data("nowtime")+3;
-  var size =document.getElementById('danMuUserTextSize').value;
-  var text_obj='{ "text":"'+text+'","color":"'+color+'","size":"'+size+'","position":"'+position+'","time":'+time+'}';
-  $.post("stone.php",{danmu:text_obj});
-  var text_obj='{ "text":"'+text+'","color":"'+color+'","size":"'+size+'","position":"'+position+'","time":'+time+',"isnew":""}';
-  var new_obj=eval('('+text_obj+')');
-  
-  var a_danmu = {
-    "text" : text,
-    "color" : color,
-    "size" : size,
-    "position" : position,
-    "time" : time ,
-    "isnew" : " "
-  };
-  
-  $('#danmu').danmu("add_danmu",a_danmu);
-  document.getElementById('danMuUserText').value='';
-});
+
 
 
 
@@ -71,6 +48,32 @@ $("body").prepend("<div id=\"danmu\" </div>");
 $("body").prepend("<div id=\"danmu_dialog\" title=\"彈幕視窗\">  " + htmlTag );  
 $("#danmu_dialog").dialog();
  console.log("Danmu Start");
+ 
+ $("#danMuUserBtn").click(function() {
+	//alert("test");
+    var text = document.getElementById('danMuUserText').value;
+  var color = document.getElementById('danMuUserColor').value;
+  var position = document.getElementById('danMuUserPosition').value;
+  var time = $('#danmu').data("nowtime")+3;
+  var size =document.getElementById('danMuUserTextSize').value;
+  var text_obj='{ "text":"'+text+'","color":"'+color+'","size":"'+size+'","position":"'+position+'","time":'+time+'}';
+  $.post("stone.php",{danmu:text_obj});
+  var text_obj='{ "text":"'+text+'","color":"'+color+'","size":"'+size+'","position":"'+position+'","time":'+time+',"isnew":""}';
+  var new_obj=eval('('+text_obj+')');
+  
+  var a_danmu = {
+    "text" : text,
+    "color" : color,
+    "size" : size,
+    "position" : position,
+    "time" : time ,
+    "isnew" : " "
+  };
+  
+  $('#danmu').danmu("add_danmu",a_danmu);
+  document.getElementById('danMuUserText').value='';
+});
+
  var a_danmu = {
     "text" : "豆喔!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
     "color" : "red",
