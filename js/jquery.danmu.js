@@ -254,8 +254,7 @@ var cyntax = {
 		"color":options.default_font_color,
 		"font-family":"SimHei" ,
 		"font-size":options.font_size_big,
-		"overflow":"hidden",
-		"pointer-events": "none"
+		"overflow":"hidden"
 	});
     var heig=this.$element.height();
 	var row_conut=parseInt(heig/options.font_size_big);

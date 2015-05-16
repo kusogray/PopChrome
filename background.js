@@ -63,7 +63,7 @@ $(function () {
 		"time" : 1,
 		"isnew" : " "
 	};
-	
+
 	var a_danmu2 = {
 		"text" : "豆豆豆鬥喔!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
 		"color" : "red",

@@ -1,3 +1,11 @@
+/**
+    @version	@date		@author     @purpose
+	1.0.0		2015/05/02	kusogray	init. project
+	1.0.1		2015/05/02	kusogray	using firebase
+	
+	
+ */
+
 $(function() {
   
 var rect={};
@@ -18,6 +26,7 @@ document.body.addEventListener('click', function(){
   };
   
    //$('#danmu').danmu("add_danmu",a_danmu); 
+
 }); 
 
 
@@ -49,6 +58,14 @@ $("body").prepend("<div id=\"danmu_dialog\" title=\"彈幕視窗\">  " + htmlTag
 $("#danmu_dialog").dialog();
  console.log("Danmu Start");
  
+ //1.0.1
+ var myFirebaseRef = new Firebase("https://popchrome.firebaseio.com/");
+ 
+/* myDataRef.on('child_added', function(snapshot) {
+	var message = snapshot.val();
+	alert(message);
+  }); */
+ 
  $("#danMuUserBtn").click(function() {
 	//alert("test");
     var text = document.getElementById('danMuUserText').value;
@@ -73,6 +90,7 @@ $("#danmu_dialog").dialog();
   $('#danmu').danmu("add_danmu",a_danmu);
   document.getElementById('danMuUserText').value='';
 });
+
 
  var a_danmu = {
     "text" : "豆喔!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
@@ -103,10 +121,6 @@ $("#danmu_dialog").dialog();
   
   $('#danmu').danmu('danmu_resume');
   $('#danmu').danmu("add_danmu",a_danmu); 
-  
-  
-  
- 
   
   console.log("Danmu Finish");
  });

@@ -1,5 +1,3 @@
-﻿// test git hub commit
-
   $(function() {
   //hljs.initHighlightingOnLoad();
   // $("body").prepend("<img height=\"700\" width=\"700\" src='http://i.imgur.com/SApd3wJ.jpg'  ></img>");
