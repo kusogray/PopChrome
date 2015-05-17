@@ -2,7 +2,7 @@
     @version	@date		@author     @purpose
 	1.0.0		2015/05/02	kusogray	init. project
 	1.0.1		2015/05/02	kusogray	using firebase
-	
+	1.0.2		2015/05/17	kusogray	fire on enter key pressed
 	
  */
 
@@ -171,3 +171,6 @@ function getVideoObjectCase() {
 
     return rect;
 }  
+
+// v1.0.2
+
